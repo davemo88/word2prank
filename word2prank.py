@@ -19,6 +19,7 @@ def word2prank(countsfile, outfile, dimension, iterations):
     vocab = counts.keys()
     num_words = len(vocab)
     reverse_vocab = {vocab[i] : i for i in range(num_words)}
+## randomly initialize our Embedding Matrix
     em = numpy.random.rand(num_words, dimension)
 
     for i in range(iterations):
