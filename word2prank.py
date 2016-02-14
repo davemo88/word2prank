@@ -6,6 +6,8 @@ import numpy
 import click
 import pickle
 
+## countsfile is created by pickle.dumps and is a dictionary of word-context counts e.g.:
+## {w_1: {w_2: 5, w_7: 17}, w_2: {w_6: 4, w_9: 2}, ... }
 @click.argument('countsfile')
 @click.option('--outfile', default='results.pkl', help='output file')
 @click.option('--dimension', default=100, help='dimension of embeddings')
